@@ -11,9 +11,7 @@ now = dt.datetime.now()
 today = (now.month, now.day)
 
 df = pandas.read_csv("birthdays.csv")
-print(df)
 birthdays_dict = {(row["month"], row["day"]): row for (index, row) in df.iterrows()}
-print(birthdays_dict)
 
 if today in birthdays_dict:
     birthday_today = birthdays_dict[today]
